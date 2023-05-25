@@ -1,0 +1,226 @@
+import 'package:flutter/material.dart';
+
+class Calculator extends StatelessWidget {
+  const Calculator({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.center,
+           children: [
+             Expanded(
+              child: Container(
+                alignment: Alignment.centerRight,
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Text(
+                  '2548',
+                  style: const TextStyle(fontSize: 60,color: Colors.white),
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.grey,
+                  child: Text("AC",
+                  style: const TextStyle(fontSize: 30,color: Colors.black),
+                  ),
+                ),
+                const SizedBox(height: 50),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.grey,
+                  child: Text("+/-",
+                  style: const TextStyle(fontSize: 30,color: Colors.black),
+                  ),
+                ),
+                const SizedBox(height: 50),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.grey,
+                  child: Text("%",
+                  style: const TextStyle(fontSize: 30,color: Colors.black),
+                  ),
+                ),
+                const SizedBox(height: 50),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.orange,
+                  child: Text("/",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 16), 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text("7",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text("8",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text("9",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.orange,
+                  child: Text("x",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 16), 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text("4",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text("5",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text("6",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.orange,
+                  child: Text("-",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 16), 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text("1",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text("2",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text("3",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.orange,
+                  child: Text("+",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 16),
+            Padding(
+          padding: const EdgeInsets.only(bottom: 16), // Add desired padding value
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(60),
+                  child: Container(
+                    width: 125,
+                    height: 50,
+                    color: Color.fromARGB(255, 36, 35, 35),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                      padding: EdgeInsets.only(left: 10),
+                    child: Text( " 0 ",
+                    style: const TextStyle(fontSize: 30,color: Colors.white,
+                    ),
+                  ),
+                ), 
+              ),   
+            ),    
+          ), 
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Color.fromARGB(255, 36, 35, 35),
+                  child: Text(",",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.orange,
+                  child: Text("=",
+                  style: const TextStyle(fontSize: 30,color: Colors.white),
+                  
+                  ),
+                ),
+              ],
+            ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
